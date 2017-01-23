@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122113012) do
+ActiveRecord::Schema.define(version: 20170122133249) do
 
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170122113012) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "plan"
   end
 
   add_index "tenants", ["name"], name: "index_tenants_on_name"
