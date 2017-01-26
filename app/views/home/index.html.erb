@@ -1,7 +1,10 @@
 <!--<h1>Home#index</h1>-->
 <!--<p>Find me in app/views/home/index.html.erb</p>-->
 <% if current_user %>
-  <h3>Organization: <%= @tenant.name %></h3>
+  <!--<h3>Organization: <%= @tenant.name %></h3>-->
+  <h3 class="pull-right">Organization: <%= @tenant.name %></h3>
+  <%= render 'projects/list' %>
+
   
 <% else %>
   <div class="jumbotron">
