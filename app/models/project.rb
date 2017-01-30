@@ -1,8 +1,12 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
-  
+
   
   validates_uniqueness_of :title
+  has_many :artifacts, dependent: :destroy   ##### if delete project, all actifact will be deleted
+  
+  
+  
   validate :free_plan_can_only_have_one_project ## custom validation
   
   
