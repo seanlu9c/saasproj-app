@@ -104,7 +104,8 @@ class RegistrationsController < ::Milia::RegistrationsController
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
-  def sign_up_params_user()
+  # def sign_up_params_user()               ## causing missing arg
+  def sign_up_params_user(is_admin)
     devise_parameter_sanitizer.sanitize(:sign_up)
   end
 
